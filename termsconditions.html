@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript Terms conditions</title>
+	</head>
+	<body>
+		<div>
+			<label><input type="checkbox" onclick="onTermsSelect()" id="termsCheckboxId" /><span>Terms and conditions</span></label>
+			<div><button disabled onclick="onproceed()" id="proceedId">Proceed</button></div>
+		</div>
+		<script>
+			function onTermsSelect() {
+				var checkboxDom = document.getElementById('termsCheckboxId');
+				var proceedDom = document.getElementById('proceedId');
+				if (checkboxDom.checked) {
+					proceedDom.removeAttribute('disabled');
+				} else {
+					proceedDom.setAttribute('disabled', '');
+				}
+			}
+			function onproceed() {
+				alert('Proceeding');
+			}
+		</script>
+	</body>
+</html>
